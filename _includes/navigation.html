@@ -1,5 +1,16 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
-</nav>
+<div class="w3-bar w3-flat-carrot">
+	<a href="/" class="w3-bar-item w3-button">Home</a>
+	{% assign sorted_sections = site.sections | sort: 'priority' %}
+	{% for section in sorted_sections %}
+		<a href="{{ section.url }}" class="w3-bar-item w3-button w3-hide-small">{{ section.title }} </a>
+	{% endfor %}
+	<a href="/contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="mobile-navbar" class="w3-bar-block w3-flat-orange w3-hide w3-hide-large w3-hide-medium">
+	{% for section in sorted_sections %}
+		<a href="{{ section.url }}" class="w3-bar-item w3-button">{{ section.title }} </a>
+	{% endfor %}
+	<a href="/contact.html" class="w3-bar-item w3-button">Contact</a>
+</div>

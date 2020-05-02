@@ -1,4 +1,8 @@
 ---
-title: Home
+title: Jean-Loïc Pouffier
+layout: landing
 ---
-# {{ "Hello World!" | downcase }}
+# Jean-Loïc Pouffier
+
+Welcome to my personal website.
+

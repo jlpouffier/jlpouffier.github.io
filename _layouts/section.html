@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="w3-container w3-panel">
+	<div class="w3-card-2 w3-round-large">
+		<header class="w3-container">
+			<h1>{{page.title}}</h1>
+		</header>
+		<div class="w3-container">
+			{{content}}
+		</div>
+	</div>
+</div>
+
+
+
+{%if page.cta-link%}
+<div class="w3-container w3-panel">
+	<div class="w3-card-2 w3-flat-belize-hole w3-round-large">
+		<header class="w3-container">
+			<h3>{{page.cta-description}}</h3>
+		</header>
+		<div class="w3-container">
+			<p><a href="{{page.cta-link}}" target="blank">{{page.cta-text-link}}</a></p>
+		</div>
+	</div>
+</div>
+{%endif%}
+
+{% assign related_youtube_videos = site.data.youtube-videos | where: 'section-id' , page.id %}
+{% if related_youtube_videos.size > 0 %}
+<div class="w3-container w3-panel">
+	<h2>Related videos</h2>
+	{% for video in related_youtube_videos %}
+		<article class="w3-card-2 w3-round-large">
+			<header class="w3-container">
+				<h3>{{video.title}}</h3>
+			</header>
+			<div class="w3-container">
+				<div class="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="w3-container"><p></p></div>
+		</article>
+	{% endfor %}
+</div>
+{% endif %}
+

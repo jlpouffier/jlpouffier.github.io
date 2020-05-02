@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="w3-container">
+	{{ content }}
+</div>
+
+{% assign sorted_sections = site.sections | sort: 'priority' %}
+{% for section in sorted_sections %}
+	<div class="w3-container w3-panel">
+		<article class=" w3-card-2 w3-round-large">
+			<header class="w3-container">
+				<h2>
+					<a href="{{section.url}}">{{section.title}}</a>
+				</h2>
+			</header>
+			<div class="w3-container">
+				<p>{{section.one-liner}}</p>
+			</div>
+		</article>
+	</div>
+{% endfor %}
+
+
