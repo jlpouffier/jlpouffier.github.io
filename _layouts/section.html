@@ -41,8 +41,10 @@ layout: default
 	{% for video in related_youtube_videos %}
 	<article class="w3-col l6">
 		<h3 class="w3-container">{{video.title}}</h3>
-			<div class=" w3-container videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="w3-container">
+				<div class="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 		<div class="w3-container">
 			<p></p>
