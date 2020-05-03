@@ -14,11 +14,9 @@ layout: default
 		</div>
 	</article>
 </div>
-<div class="w3-container w3-panel">
-	<div class="w3-card-2 w3-round-large">
-		<div class="w3-container">
-			{{content}}
-		</div>
+<div class="w3-container">
+	<div class="w3-container">
+		{{content}}
 	</div>
 </div>
 
@@ -42,14 +40,10 @@ layout: default
 <div class="w3-container w3-row">
 	{% for video in related_youtube_videos %}
 	<article class="w3-col l6">
-		<header class="w3-container">
-			<h3>{{video.title}}</h3>
-		</header>
-		<div class="w3-container">
-			<div class="videoWrapper">
+		<h3 class="w3-container">{{video.title}}</h3>
+			<div class=" w3-container videoWrapper">
 				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		</div>
 		<div class="w3-container">
 			<p></p>
 		</div>
@@ -65,13 +59,10 @@ layout: default
 	{% for picture in related_pictures %}
 	<article class="w3-col l6">
 		<div class="w3-container">
-			<p></p>
-		</div>
-		<div class="w3-container">
 			<img src="{{picture.location}}" alt="{{picture.title}}" class="w3-image">
 		</div>
 		<div class="w3-container">
-			<p>{{picture.title}}</p>
+			<p><i>{{picture.title}}<i></p>
 		</div>
 	</article>
 	{% endfor %}
