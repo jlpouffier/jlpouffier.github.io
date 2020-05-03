@@ -1,4 +1,6 @@
-<div class="w3-bar w3-flat-carrot">
+{% assign main_color_code = site.data.colors['main'].code %}
+
+<div class="w3-bar {{main_color_code}}">
 	<a href="/" class="w3-bar-item w3-button">Home</a>
 	{% assign sorted_sections = site.sections | sort: 'priority' %}
 	{% for section in sorted_sections %}
@@ -8,7 +10,7 @@
 	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
 </div>
 
-<div id="mobile-navbar" class="w3-bar-block w3-flat-orange w3-hide w3-hide-large w3-hide-medium">
+<div id="mobile-navbar" class="w3-bar-block {{main_color_code}} w3-hide w3-hide-large w3-hide-medium">
 	{% for section in sorted_sections %}
 		<a href="{{ section.url }}" class="w3-bar-item w3-button">{{ section.title }} </a>
 	{% endfor %}

@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign secondary_color_code = site.data.colors['secondary'].code %}
 
 <div class="w3-container">
 	{{ content }}
@@ -9,20 +10,12 @@ layout: default
 {% assign sorted_sections = site.sections | sort: 'priority' %}
 {% for section in sorted_sections %}
 	<div class="w3-container w3-panel">
-		<article class=" w3-card-2 w3-round-large">
-			<header class="w3-container">
-				<h2>
-					{{section.title}}
-				</h2>
-			</header>
+		<article class="w3-card-2 w3-round-large">
 			<div class="w3-container">
+				<h2>{{section.title}}</h2>
 				<img src="{{section.img}}" alt="{{section.title}}" class="w3-image">
-			</div>
-			<div class="w3-container">
 				<p>{{section.one-liner}}</p>
-			</div>
-			<div class="w3-container">
-				<p><a href="{{section.url}}" class="w3-button w3-block w3-round-large w3-flat-belize-hole">read more</a></p>
+				<p><a href="{{section.url}}" class="w3-button w3-block w3-round-large {{secondary_color_code}}">Read more</a></p>
 			</div>
 		</article>
 	</div>
