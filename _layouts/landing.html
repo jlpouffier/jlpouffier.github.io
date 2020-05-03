@@ -12,11 +12,17 @@ layout: default
 		<article class=" w3-card-2 w3-round-large">
 			<header class="w3-container">
 				<h2>
-					<a href="{{section.url}}">{{section.title}}</a>
+					{{section.title}}
 				</h2>
 			</header>
 			<div class="w3-container">
+				<img src="{{section.img}}" alt="{{section.title}}" class="w3-image">
+			</div>
+			<div class="w3-container">
 				<p>{{section.one-liner}}</p>
+			</div>
+			<div class="w3-container">
+				<p><a href="{{section.url}}" class="w3-button w3-block w3-round-large w3-flat-belize-hole">read more</a></p>
 			</div>
 		</article>
 	</div>

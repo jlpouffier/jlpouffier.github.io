@@ -1,13 +1,14 @@
 ---
-title: Drone
+title: FPV Drone
 priority: 2
-one-liner: Passionate about aerial cinematogray, I moved away from commercial drones quite quickly, now I build my own drones and fly then FPV.
+one-liner: Passionate about aerial cinematogray, I quickly moved away from commercial drones, now I build my own drones and fly then FPV
+img: /assets/img/drone.jpg
 cta-link: https://www.youtube.com/channel/UCF_CtbtSP3APivlNhqsHoKg
 cta-description: I created a Youtube channel to document my FPV story
-cta-text-link: You can check it out here !
+cta-text-link: You can check it out here
 ---
 
-I like to explain how I got into the hobby of FPV Drone Fresstlying as an iterative refinement process of one of my hobby.
+I like to explain how I got into the hobby of FPV Drone Freestlying as an iterative refinement process of one of my hobby.
 
 I have always been interested by photography. The next logical step was to try cinematography. I loved the creative aspect, I liked the post-production process, especially coupling my shots with music.
 In the end I was looking for something more dynamic.

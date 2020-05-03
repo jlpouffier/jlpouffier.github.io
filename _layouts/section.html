@@ -2,10 +2,20 @@
 layout: default
 ---
 <div class="w3-container w3-panel">
-	<div class="w3-card-2 w3-round-large">
+	<article class=" w3-card-2 w3-round-large">
 		<header class="w3-container">
-			<h1>{{page.title}}</h1>
+			<h2>{{page.title}}</h2>
 		</header>
+		<div class="w3-container">
+			<img src="{{page.img}}" alt="{{page.title}}" class="w3-image">
+		</div>
+		<div class="w3-container">
+			<p></p>
+		</div>
+	</article>
+</div>
+<div class="w3-container w3-panel">
+	<div class="w3-card-2 w3-round-large">
 		<div class="w3-container">
 			{{content}}
 		</div>
@@ -13,37 +23,58 @@ layout: default
 </div>
 
 
-
 {%if page.cta-link%}
 <div class="w3-container w3-panel">
-	<div class="w3-card-2 w3-flat-belize-hole w3-round-large">
+	<div class="w3-card-2 w3-flat-wet-asphalt w3-round-large">
 		<header class="w3-container">
-			<h3>{{page.cta-description}}</h3>
+			<h4>{{page.cta-description}}</h4>
 		</header>
 		<div class="w3-container">
-			<p><a href="{{page.cta-link}}" target="blank">{{page.cta-text-link}}</a></p>
+			<p><a href="{{page.cta-link}}" target="blank" class="w3-button w3-block w3-round-large w3-flat-belize-hole">{{page.cta-text-link}}</a></p>
 		</div>
 	</div>
 </div>
 {%endif%}
 
+
 {% assign related_youtube_videos = site.data.youtube-videos | where: 'section-id' , page.id %}
 {% if related_youtube_videos.size > 0 %}
-<div class="w3-container w3-panel">
-	<h2>Related videos</h2>
+<div class="w3-container w3-row">
 	{% for video in related_youtube_videos %}
-		<article class="w3-card-2 w3-round-large">
-			<header class="w3-container">
-				<h3>{{video.title}}</h3>
-			</header>
-			<div class="w3-container">
-				<div class="videoWrapper">
-					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
+	<article class="w3-col l6">
+		<header class="w3-container">
+			<h3>{{video.title}}</h3>
+		</header>
+		<div class="w3-container">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<div class="w3-container"><p></p></div>
-		</article>
+		</div>
+		<div class="w3-container">
+			<p></p>
+		</div>
+	</article>
 	{% endfor %}
 </div>
+{% endif %}
+
+
+{% assign related_pictures = site.data.pictures | where: 'section-id' , page.id %}
+{% if related_pictures.size > 0 %}
+<div class="w3-container w3-row">
+	{% for picture in related_pictures %}
+	<article class="w3-col l6">
+		<div class="w3-container">
+			<p></p>
+		</div>
+		<div class="w3-container">
+			<img src="{{picture.location}}" alt="{{picture.title}}" class="w3-image">
+		</div>
+		<div class="w3-container">
+			<p>{{picture.title}}</p>
+		</div>
+	</article>
+	{% endfor %}
+
 {% endif %}
 

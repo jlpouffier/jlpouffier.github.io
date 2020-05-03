@@ -1,7 +1,8 @@
 ---
 title: Work
 priority: 1
-one-liner: I am a Product Manager, currently working at Ricardo AG.
+one-liner: I am a Product Manager, currently working at Ricardo AG
+img: /assets/img/ricardo.jpg
 cta-description: I keep my LinkedIn profile up-to-date
 cta-link: https://www.linkedin.com/in/jlpouffier/
 cta-text-link: LinkedIn profile

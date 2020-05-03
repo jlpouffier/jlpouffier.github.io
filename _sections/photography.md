@@ -1,7 +1,8 @@
 ---
 title: Photography
 priority: 5
-one-liner: I am an amateur photographer.
+one-liner: I am an amateur photographer
+img: /assets/img/porto.jpg
 cta-description: I publish my best shots on 500px
 cta-link: https://500px.com/jlpouffier
 cta-text-link: Come and have a look !
