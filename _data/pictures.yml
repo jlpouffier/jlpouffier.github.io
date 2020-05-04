@@ -1,8 +1,8 @@
-- title: Berlin, Germnay
+- title: Berlin, Germany
   section-id: /sections/photography
   location: /assets/img/berlin.jpg
 
-- title: Berlin, Germnay
+- title: Berlin, Germany
   section-id: /sections/photography
   location: /assets/img/berlin2.jpg
 
@@ -10,8 +10,12 @@
   section-id: /sections/photography
   location: /assets/img/greece.jpg
 
-- title: New-York, USA
+- title: New York, USA
   section-id: /sections/photography
   location: /assets/img/nyc.jpg
+
+- title: Architecture diagram
+  section-id: /sections/home-automation
+  location: /assets/img/hass-full-architecture.png
 
 
