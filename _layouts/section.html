@@ -28,29 +28,39 @@ layout: default
 	{%endif%}
 
 	{% assign related_youtube_videos = site.data.youtube-videos | where: 'section-id' , page.id %}
-	{% if related_youtube_videos.size > 0 %}
-	{% for video in related_youtube_videos %}
-	<article class="w3-col l6">
-		<div class="w3-container">
-			<h3>{{video.title}}</h3>
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<p></p>
+	{% if related_youtube_videos.size == 1%}
+	<article class="w3-container">
+		<h3>{{related_youtube_videos[0].title}}</h3>
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{related_youtube_videos[0].youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+		<p></p>
+	</article>
+	{% elsif related_youtube_videos.size > 1 %}
+	{% for video in related_youtube_videos %}
+	<article class="w3-col l6 w3-container">
+		<h3>{{video.title}}</h3>
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<p></p>
 	</article>
 	{% endfor %}
 	{% endif %}
 
 	{% assign related_pictures = site.data.pictures | where: 'section-id' , page.id %}
-	{% if related_pictures.size > 0 %}
+	{% if related_pictures.size == 1 %}
+	<article class="w3-container">
+		<p></p>
+		<img src="{{related_pictures[0].location}}" alt="{{related_pictures[0].title}}" class="w3-image">
+		<p><i>{{related_pictures[0].title}}<i></p>
+	</article>
+	{% elsif related_pictures.size > 1 %}
 	{% for picture in related_pictures %}
-	<article class="w3-col l6">
-		<div class="w3-container">
-			<p></p>
-			<img src="{{picture.location}}" alt="{{picture.title}}" class="w3-image">
-			<p><i>{{picture.title}}<i></p>
-		</div>
+	<article class="w3-col l6 w3-container">
+		<p></p>
+		<img src="{{picture.location}}" alt="{{picture.title}}" class="w3-image">
+		<p><i>{{picture.title}}<i></p>
 	</article>
 	{% endfor %}
 	{% endif %}
