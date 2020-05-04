@@ -1,6 +1,6 @@
 ---
 title: Magic
-priority: 4
+priority: 3
 one-liner: My grandfather was a stage illusionist, he transmitted his passion for the deceptive arts to me
 img: /assets/img/cards.jpg
 cta-description: I have a youtube playlist containing all the tricks I published
