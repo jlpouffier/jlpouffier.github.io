@@ -1,8 +1,8 @@
 {% assign main_color_code = site.data.colors['main'].code %}
-<div class="w3-center {{main_color_code}}">
-	<div class="w3-bar">
+<footer class="w3-center {{main_color_code}}">
+	<footer class="w3-bar">
 		{% for contact in site.data.contacts %}
 		<a target="_blank" rel="noopener noreferrer" href="{{contact.url}}" class="w3-bar-item w3-button"><i class="fa fa-{{contact.icon}}"></i></a>
 		{% endfor %}
-	</div>
-</div>
+	</footer>
+</footer>
