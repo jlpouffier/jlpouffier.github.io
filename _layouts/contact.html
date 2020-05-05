@@ -10,7 +10,7 @@ layout: default
 	{% for contact in site.data.contacts %}
 	<div class="w3-container w3-col l4 m6">
 		<article class="w3-card-2">
-			<a target="_blank" rel="noopener noreferrer" href="{{contact.url}}" class="w3-button w3-block w3-large {{secondary_color_code}}"><i class="fa fa-{{contact.icon}}"></i> {{contact.title}}</a>
+			<a target="_blank" rel="noopener noreferrer" href="{{contact.url}}" class="w3-button w3-block w3-large {{secondary_color_code}}"><i class="{{contact.icon}}"></i> {{contact.title}}</a>
 		</article>
 		<p></p>
 	</div>

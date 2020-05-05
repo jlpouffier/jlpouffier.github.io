@@ -5,7 +5,7 @@ one-liner: I am a Product Manager, currently working at Ricardo AG
 img: /assets/img/ricardo.jpg
 cta-description: I keep my LinkedIn profile up-to-date
 cta-link: https://www.linkedin.com/in/jlpouffier/
-cta-text-link: <i class="fa fa-linkedin"></i> LinkedIn profile
+cta-text-link: <i class="fab fa-linkedin"></i> LinkedIn profile
 ---
 
 I have an engineering background. Mechanical and Industrial engineering to be exact.

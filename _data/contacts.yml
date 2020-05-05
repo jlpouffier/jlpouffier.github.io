@@ -1,15 +1,15 @@
 - title: LinkedIn
   url: https://www.linkedin.com/in/jlpouffier
-  icon: linkedin
+  icon: fab fa-linkedin
 - title: Twitter
   url: https://twitter.com/jlpouffier
-  icon: twitter
+  icon: fab fa-twitter
 - title: 500px
   url: https://500px.com/jlpouffier
-  icon: 500px
+  icon: fab fa-500px
 - title: GitHub
   url: https://github.com/jlpouffier
-  icon: github
+  icon: fab fa-github
 - title: Mail
   url: 
-  icon: envelope
+  icon: fas fa-envelope

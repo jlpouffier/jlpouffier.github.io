@@ -5,7 +5,7 @@ one-liner: Passionate about aerial cinematography, I quickly moved away from com
 img: /assets/img/drone.jpg
 cta-link: https://www.youtube.com/channel/UCF_CtbtSP3APivlNhqsHoKg
 cta-description: I created a YouTube channel to document my FPV story 
-cta-text-link: <i class="fa fa-youtube"></i> You can check it out here 
+cta-text-link: <i class="fab fa-youtube"></i> You can check it out here 
 ---
 
 I like to explain how I got into the hobby of FPV Drone Freestlying as an iterative refinement process of one of my hobby.

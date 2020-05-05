@@ -5,7 +5,7 @@ img: /assets/img/rpi.jpg
 one-liner: I love to hack existing products to best suits my needs, I try to do that with my whole apartment
 cta-link: https://github.com/jlpouffier/home-assistant-config
 cta-description: You want to explore my HomeAssistant configuration ?
-cta-text-link: <i class="fa fa-github"></i> It's on GitHub
+cta-text-link: <i class="fab fa-github"></i> It's on GitHub
 ---
 
 I became homeowner mid-2019, so I decided to try *home automation*.

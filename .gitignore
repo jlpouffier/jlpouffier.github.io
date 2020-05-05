@@ -1,4 +1,5 @@
 .jekyll-cache/
 .sass-cache/
 _site/
-assets/img/.DS_Store
+*.DS_Store
+
