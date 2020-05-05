@@ -3,57 +3,62 @@ layout: default
 ---
 {% assign secondary_color_code = site.data.colors['secondary'].code %}
 
-<div class="w3-container w3-section">
-	<header class=" w3-card-2 w3-round-large">
+<div class="w3-container w3-panel">
+	<article class=" w3-card-2 w3-round-large">
 		<div class="w3-container">
 			<h2>{{page.title}}</h2>
-			<img src="{{page.img}}" alt="{{page.title}}" class="w3-image w3-margin-bottom w3-grayscale-min">
+			<img src="{{page.img}}" alt="{{page.title}}" class="w3-image w3-grayscale-min">
+			<p></p>
 		</div>
-	</header>
-
-	<article class="w3-container">
-		{{content}}
 	</article>
 
+	<div class="w3-container">
+		{{content}}
+	</div>
+
 	{%if page.cta-link%}
-	<article class="w3-card-2 w3-round-large">
+	<div class="w3-card-2 w3-round-large">
 		<header class="w3-container">
 			<h4>{{page.cta-description}}</h4>
 		</header>
 		<div class="w3-container">
 			<p><a href="{{page.cta-link}}" target="blank" class="w3-button w3-block w3-round-large {{secondary_color_code}}">{{page.cta-text-link}}</a></p>
 		</div>
-	</article>
+	</div>
 	{%endif%}
 
 	{% assign related_youtube_videos = site.data.youtube-videos | where: 'section-id' , page.id %}
 	{% if related_youtube_videos.size == 1%}
-	<article class="w3-container w3-section">
+	<article class="w3-container">
 		<h3>{{related_youtube_videos[0].title}}</h3>
 		<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{related_youtube_videos[0].youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+		<p></p>
 	</article>
 	{% elsif related_youtube_videos.size > 1 %}
 	{% for video in related_youtube_videos %}
-	<article class="w3-col l6 w3-container w3-section">
+	<article class="w3-col l6 w3-container">
 		<h3>{{video.title}}</h3>
 		<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+		<p></p>
 	</article>
 	{% endfor %}
 	{% endif %}
 
 	{% assign related_pictures = site.data.pictures | where: 'section-id' , page.id %}
 	{% if related_pictures.size == 1 %}
-	<article class="w3-container w3-section">
+	<article class="w3-container">
+		<p></p>
 		<img src="{{related_pictures[0].location}}" alt="{{related_pictures[0].title}}" class="w3-image">
 		<p><i>{{related_pictures[0].title}}<i></p>
 	</article>
 	{% elsif related_pictures.size > 1 %}
 	{% for picture in related_pictures %}
-	<article class="w3-col l6 w3-container w3-section">
+	<article class="w3-col l6 w3-container">
+		<p></p>
 		<img src="{{picture.location}}" alt="{{picture.title}}" class="w3-image">
 		<p><i>{{picture.title}}<i></p>
 	</article>
